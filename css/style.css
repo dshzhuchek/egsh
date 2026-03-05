@@ -128,20 +128,21 @@ body{
 .hero{
 	display: flex;
 	justify-content: flex-start;
-	gap:24px
+	gap:24px;
+	align-items: stretch;
 }
 
 .photo{
-	max-width: 600px;
+	max-width: 600px; 
 	width: 100%;
-	height: auto;
+	height: 100%; /* Меняем auto на 100% */
 	position: relative;
-	max-height: 600px;
+	/* max-height: 600px; - удаляем */
 	margin: 0 auto;
-	aspect-ratio: 600 / 600;
+	/* aspect-ratio: 600 / 600; - удаляем */
 	border-radius: 24px;
 	overflow: hidden;
-	object-fit: cover;
+	object-fit: cover; /* Оставляем, чтобы фото не сжималось */
 }
 
 .video-btn-words {
@@ -173,8 +174,8 @@ body{
 .words-button-container {
     display: flex;
     justify-content: space-between; 
-    align-items: center; 
-    gap: 32px;
+    align-items: center;
+	max-width: 800px;
     width: 100%;
 }
 
@@ -184,6 +185,8 @@ body{
     text-align: left;
     gap: 8px;
     flex: 1;
+	max-width: 300px;
+	width: 100%
 }
 
 .text1 {
@@ -447,6 +450,13 @@ footer{
     transition-delay: 0.5s;
 }
 
+@media (max-width: 1512px) {
+	.photo{
+		max-height: 512px;
+		height: 100%
+	}
+}
+
 /* Адаптив для экранов до 1440px */
 @media (max-width: 1440px) {
     body {
@@ -521,7 +531,7 @@ footer{
     }
     
     .words-button-container {
-        gap: 28px;
+        justify-content: space-between
     }
     
     .text1 {
@@ -582,6 +592,13 @@ footer{
     }
 }
 
+@media (max-width: 1366px) {
+	.photo{
+		max-height: 488px;
+		height: 100%
+	}
+}
+
 /* Адаптив для планшетов в горизонтальном виде (1194px) */
 @media (max-width: 1194px) {
     body {
@@ -636,8 +653,9 @@ footer{
     
     .photo {
         max-width: 480px;
-        max-height: 480px;
+        max-height: 432px;
         border-radius: 20px;
+		height: 100%
     }
     
     .video-btn-words {
@@ -656,7 +674,7 @@ footer{
     }
     
     .words-button-container {
-        gap: 26px;
+        justify-content: space-between;
     }
     
     .text1 {
@@ -803,7 +821,7 @@ footer{
     }
     
     .words-button-container {
-        gap: 20px;
+        justify-content: space-between
     }
     
     .text1 {
@@ -942,8 +960,7 @@ footer{
         left: 0;
         width: 100vw;
         height: 100vh;
-        background: rgba(11, 11, 11, 0.95);
-        backdrop-filter: blur(5px);
+        background: #0B0B0B;
         z-index: 20;
         flex-direction: column;
         justify-content: center;
@@ -1068,13 +1085,15 @@ footer{
     
     .words-button-container {
         flex-direction: row;
-        gap: 16px;
+        justify-content: space-between;
         align-items: center;
     }
     
     .words {
         text-align: left;
         gap: 4px;
+		max-width: 300px;
+		width: 100%
     }
     
     .text1 {
