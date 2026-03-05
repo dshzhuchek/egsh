@@ -1,0 +1,391 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>esoundedby</title>
+	<link rel="icon" type="image/svg+xml" href="css/pics/e.svg">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	
+	<div class= "main-container"> 
+	
+	<div class="header-conteiner">
+		<a href="index.html" class="lang-btn">
+        ru
+    	</a>
+		
+		<!-- Десктопная навигация -->
+		<div class="navig-btn desktop-nav">
+			<button class="nav-btn" onclick="document.getElementById('about').scrollIntoView({behavior: 'smooth'})">about me</button>
+			<button class="nav-btn" onclick="document.getElementById('projects').scrollIntoView({behavior: 'smooth'})">projects</button>
+			<button class="nav-btn" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">contact me</button>
+		</div>
+		
+		<!-- Мобильное бургер-меню -->
+		<div class="mobile-nav">
+			<button class="burger-btn" id="burgerBtn">
+				<span></span>
+				<span></span>
+				<span></span>
+			</button>
+			<div class="mobile-menu" id="mobileMenu">
+				<button class="mobile-nav-btn" onclick="document.getElementById('about').scrollIntoView({behavior: 'smooth'}); document.getElementById('burgerBtn').classList.remove('active'); document.getElementById('mobileMenu').classList.remove('active');">about me</button>
+				<button class="mobile-nav-btn" onclick="document.getElementById('projects').scrollIntoView({behavior: 'smooth'}); document.getElementById('burgerBtn').classList.remove('active'); document.getElementById('mobileMenu').classList.remove('active');">projects</button>
+				<button class="mobile-nav-btn" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'}); document.getElementById('burgerBtn').classList.remove('active'); document.getElementById('mobileMenu').classList.remove('active');">contact me</button>
+			</div>
+		</div>
+	</div>
+	
+	<img class="name" src="css/pics/nameing.png" alt="name">
+		
+		
+		<div class="hero">
+			<img class="photo" src="css/pics/photo1.jpg" alt="Egor Ryabov">
+			
+			<div class="video-btn-words">
+                <div class="video-container">
+                    <iframe src="https://vkvideo.ru/video_ext.php?oid=-236156209&id=456239024&hash=ab2e53677be1d704&hd=4"
+								allow="autoplay; encrypted-media; fullscreen; picture-in-picture; screen-wake-lock;"
+								frameborder="0"
+								allowfullscreen>
+                    </iframe>
+                </div>
+                
+                <div class="words-button-container">
+                    <div class="words">
+                        <div class="text1">sound designer</div>
+                        <div class="text1">musician</div>
+                    </div>
+                    
+                    <button class="cntme-button" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">CONTACT ME</button>
+                </div>
+            </div>
+		</div>
+		
+		<!-- Якорь для ABOUT ME -->
+		<div id="about"></div>
+		<div class="zagol"> ABOUT ME </div>
+		
+		<div class="about-me">
+			
+				<div class="text2">I work with sound for film, animation, games and multimedia.</div>
+				
+				<div class="text-conteiner">
+					<!-- Первый абзац - всегда виден, на мобильных по центру -->
+					<div class="text3 first-paragraph">I work on projects in film, animation, music production, and media as a sound designer, sound engineer, and musician. I also work on music videos and develop sound design for advertising productions.</div>
+					
+					<!-- Контейнер для всего скрытого текста -->
+					<div class="more-text-container" id="moreText">
+						<!-- Второй абзац (весь текст, который нужно центрировать) -->
+						<div class="text3"><br> For my work in film, animation, and media, I use <span style="color: #767676;"> Reaper</span>, <span style="color: #767676;">Pro&nbsp;Tools</span>, <span style="color: #767676;">Logic&nbsp;Pro</span>,<span style="color: #767676;"> FMOD</span> and<span style="color: #767676;"> Wwise</span> for game audio.<br> 
+						<br>
+						I enjoy trying unconventional approaches, developing new ideas, and implementing interesting concepts in sound creation. I create many textures by hand in the studio or use sound synthesis plugins.<br>
+						<br>
+						I approach projects with special attention and creativity, and am always open to discussion.<br>
+						<br></div>
+					
+						<!-- Последний абзац (тоже центрируется) -->
+						<div class="text4">In my work, it is important for me to convey emotions and a sense of presence through sound, to saturate the visual with a textured atmosphere and unique sound.</div>
+					</div>
+					
+					<!-- Кнопка "читать больше" -->
+					<button class="read-more-btn" id="readMoreBtn">read more</button>
+				</div>
+				
+		</div>
+		
+		<!-- Якорь для PROJECTS -->
+		<div id="projects"></div>
+		<div class="zagol"> PROJECTS </div>
+		
+		<div class="zagol2"> SOUND DESIGN </div>
+		
+		<hr style="height:2px; border-width:0; background-color:#767676; margin-top: 16px; margin-bottom: 16px">
+		
+		<div class="project-block">
+			
+			<div class="content-wrapper">
+				<div class="zagol3">CLIPS</div>
+
+				<div class="right-content">
+					
+							<div class="video-container fade-in-item" style="margin-top:10px;">
+								<iframe
+										src="https://vkvideo.ru/video_ext.php?oid=-135720406&id=456240001&hash=1f80aa47ac430b03&hd=3"
+										allow="autoplay; encrypted-media; fullscreen; picture-in-picture; screen-wake-lock;"
+										frameborder="0"
+										allowfullscreen>
+								</iframe>
+							</div>
+
+							<div class="video-names fade-in-item delay-1">
+								<div class="text-left">polnalyubvi</div>
+								<div class="text-right">sound design</div>
+							</div>
+
+					
+					
+							<div class="video-container fade-in-item">
+								<iframe
+										src="https://vkvideo.ru/video_ext.php?oid=-96936554&id=456240288&hash=71231d0fbebfac57&hd=3"
+										allow="autoplay; encrypted-media; fullscreen; picture-in-picture; screen-wake-lock;"
+										frameborder="0"
+										allowfullscreen>
+								</iframe>
+							</div>
+
+							<div class="video-names fade-in-item delay-2">
+								<div class="text-left">ANDRO</div>
+								<div class="text-right">sound design</div>
+							</div>
+					
+					
+					
+							<div class="video-container fade-in-item">
+								<iframe
+										src="https://vkvideo.ru/video_ext.php?oid=-102234580&id=456245581&hd=3"
+										allow="autoplay; encrypted-media; fullscreen; picture-in-picture; screen-wake-lock;"
+										frameborder="0"
+										allowfullscreen>
+								</iframe>
+								
+							</div>
+
+							<div class="video-names fade-in-item delay-3">
+								<div class="text-left">nttrl x XRUSTALIC</div>
+								<div class="text-right">sound design</div>
+							</div>
+
+					
+					
+					
+							<div class="video-container fade-in-item">
+								<iframe
+										src="https://vkvideo.ru/video_ext.php?oid=-175911026&id=456241544&hash=72d9b97a691389ed&hd=3"
+										allow="autoplay; encrypted-media; fullscreen; picture-in-picture; screen-wake-lock;"
+										frameborder="0"
+										allowfullscreen>
+								</iframe>
+							</div>
+
+							<div class="video-names fade-in-item delay-4">
+								<div class="text-left">ГОРШЕНЕВ</div>
+								<div class="text-right">sound design</div>
+							</div>
+							
+					
+					
+							<div class="video-container fade-in-item">
+								<iframe
+										src="https://vkvideo.ru/video_ext.php?oid=-236156209&id=456239018&hash=6dcbbd209fc4bfb4&hd=3"
+										allow="autoplay; encrypted-media; fullscreen; picture-in-picture; screen-wake-lock;"
+										frameborder="0"
+										allowfullscreen>
+								</iframe>
+							</div>
+
+							<div class="video-names fade-in-item delay-5">
+								<div class="text-left">BLINK-OFF</div>
+								<div class="text-right">sound design</div>
+							</div>
+				</div>
+			</div>
+		</div>
+		
+		<hr style="height:2px; border-width:0; background-color:#767676; margin-top: 16px; margin-bottom: 16px">
+		
+		<div class="project-block">
+			
+			<div class="content-wrapper">
+				<div class="zagol3">FILMS</div>
+
+				<div class="right-content">
+					
+							<div class="video-container fade-in-item" style="margin-top:10px;">
+								<iframe
+										src="https://vkvideo.ru/video_ext.php?oid=-236156209&id=456239021&hash=0e518fbfc3ab9592&hd=4"
+										allow="autoplay; encrypted-media; fullscreen; picture-in-picture; screen-wake-lock;"
+										frameborder="0"
+										allowfullscreen>
+								</iframe>
+							</div>
+
+							<div class="video-names fade-in-item delay-1">
+								<div class="text-left">Wheel alignment</div>
+								<div class="text-right">sound design</div>
+							</div>
+
+					
+					
+							<div class="video-container fade-in-item">
+								<iframe src="https://vkvideo.ru/video_ext.php?oid=-236156209&id=456239022&hash=75aace6a3a42f8ac&hd=4"
+										allow="autoplay; encrypted-media; fullscreen; picture-in-picture; screen-wake-lock;"
+										frameborder="0"
+										allowfullscreen>
+								</iframe>
+							</div>
+
+							<div class="video-names fade-in-item delay-2">
+								<div class="text-left"> <a href="https://www.kinopoisk.ru/film/7484388/?utm_referrer=www.google.com" target="_blank" rel="noopener noreferrer">Where is your soul?</a></div>
+								<div class="text-right">assistent / sound&nbsp;design</div>
+							</div>
+					
+					
+					
+							<div class="video-container fade-in-item">
+								<iframe src="https://vkvideo.ru/video_ext.php?oid=-236156209&id=456239020&hash=8ac2c70a22172f34&hd=4"
+										allow="autoplay; encrypted-media; fullscreen; picture-in-picture; screen-wake-lock;"
+										frameborder="0"
+										allowfullscreen>
+								</iframe>
+							</div>
+
+							<div class="video-names fade-in-item delay-2">
+								<div class="text-left">Plan A</div>
+								<div class="text-right">sound design</div>
+							</div>
+					
+				</div>
+			</div>
+		</div>
+		
+		<hr style="height:2px; border-width:0; background-color:#767676; margin-top: 16px; margin-bottom: 16px">
+		
+		<div class="project-block">
+			
+			<div class="content-wrapper">
+				<div class="zagol3">ADVERTISING</div>
+
+				<div class="right-content">
+					
+							<div class="video-container fade-in-item" style="margin-top:10px;">
+								<iframe
+										src="https://vkvideo.ru/video_ext.php?oid=-236156209&id=456239019&hash=d77c2bfe5bb1a81b&hd=4"
+										allow="autoplay; encrypted-media; fullscreen; picture-in-picture; screen-wake-lock;"
+										frameborder="0"
+										allowfullscreen>
+								</iframe>
+							</div>
+
+							<div class="video-names fade-in-item delay-1">
+								<div class="text-left">SELECT VINTAGE</div>
+								<div class="text-right">sound design</div>
+							</div>
+
+					
+					
+							<div class="video-container fade-in-item">
+								<iframe
+										src="https://vkvideo.ru/video_ext.php?oid=-226106545&id=456239114&hash=b936754648ce1446&hd=3"
+										allow="autoplay; encrypted-media; fullscreen; picture-in-picture; screen-wake-lock;"
+										frameborder="0"
+										allowfullscreen>
+								</iframe>
+							</div>
+
+							<div class="video-names fade-in-item delay-2">
+								<div class="text-left">КрафтиКо</div>
+								<div class="text-right">sound design</div>
+							</div>
+				</div>
+			</div>
+		</div>
+		
+		<hr style="height:2px; border-width:0; background-color:#767676; margin-top: 16px; margin-bottom: 16px">
+		
+		<div class="project-block">
+			
+			<div class="content-wrapper">
+				<div class="zagol3">ANIMATION</div>
+
+				<div class="right-content">
+					
+							<div class="video-container fade-in-item" style="margin-top:10px;">
+								<iframe
+										src="https://vkvideo.ru/video_ext.php?oid=-236156209&id=456239017&hash=f7e5c9949f503c7f&hd=4"
+										allow="autoplay; encrypted-media; fullscreen; picture-in-picture; screen-wake-lock;"
+										frameborder="0"
+										allowfullscreen>
+								</iframe>
+							</div>
+
+							<div class="video-names fade-in-item delay-1">
+								<div class="text-left">Without the&nbsp;moon</div>
+								<div class="text-right">supv. sound editor / sound&nbsp;design</div>
+							</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="zagol2"> OST &amp; SOUND DESIGN </div>
+		
+		<hr style="height:2px; border-width:0; background-color:#767676; margin-top: 16px; margin-bottom: 16px">
+		
+		<div class="project-block">
+			
+			<div class="content-wrapper">
+				<div class="zagol3">GAMES</div>
+
+				<div class="right-content">
+					
+							<div class="video-container fade-in-item" style="margin-top:10px;">
+								<iframe
+										src="https://vkvideo.ru/video_ext.php?oid=-236156209&id=456239023&hash=af7b3268642f2263&hd=4"
+										allow="autoplay; encrypted-media; fullscreen; picture-in-picture; screen-wake-lock;"
+										frameborder="0"
+										allowfullscreen>
+								</iframe>
+							</div>
+
+							<div class="video-names fade-in-item delay-1">
+								<div class="text-left"> <a href="https://store.steampowered.com/app/2860780/BOUNCE_GUN" target="_blank" rel="noopener noreferrer">BOUNCE GUN</a></div>
+								<div class="text-right">soundtrack</div>
+							</div>
+		
+				</div>
+			</div>
+		</div>
+		
+		<!-- Якорь для CONTACT ME -->
+		<div id="contact"></div>
+		<div class="zagol">CONTACT ME </div>
+		
+		<div class="contacts-container">
+  			<div class="contacts-wrapper">
+    			<div class="conteiner-contacts">
+					  <div class="contacts">
+						<div class="text5">EMAIL</div>
+						<div class="text5">esoundedby@gmail.com</div>
+					  </div>
+					  <div class="contacts">
+						<div class="text5">TELEGRAM</div>
+						<div class="text5">@eeaagoo</div>
+					  </div>
+					  <div class="contacts">
+						<div class="text5">INST</div>
+						<div class="text5">@esoundedby</div>
+					  </div>
+    			</div>
+				<div class="conteiner-icons">
+				  
+				  <a href="https://open.spotify.com/artist/0rh5GmcMetripITdjrfYyR?si=VpjShrsnQYuzlSk2C2fkRA" target="_blank" rel="noopener noreferrer"><img class="icons" src="css/pics/spoty.png" alt="Spotify"></a>
+				  <a href="https://t.me/eeaagoo" target="_blank" rel="noopener noreferrer"><img class="icons" src="css/pics/tg.png" alt="Telegram"></a>
+				  <a href="https://music.yandex.ru/artist/22786017?ref_id=1D9D6361-A417-4B1E-A288-43550FCF408B&utm_medium=copy_link" target="_blank" rel="noopener noreferrer"><img class="icons" src="css/pics/yandex.png" alt="Yandex Music"></a>
+				</div>
+  			</div>
+		</div>
+		
+		<footer>
+			designed by <a href="https://t.me/zhchkk" target="_blank" rel="noopener noreferrer" style="text-decoration:none">zhchk</a>
+			<p>&copy;2026 Egor Ryabov</p>
+			
+		</footer>
+	
+	</div>
+	
+	<script src="js/scripteng.js"></script>
+	
+</body>
+</html>
