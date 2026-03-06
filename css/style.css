@@ -1,17 +1,25 @@
 @charset "utf-8";
 @font-face {
-font-family: "Montserrat";  
-src: url("font/Montserrat-Regular.ttf") format("truetype"); 
-font-style: normal; 
-font-weight: 400;
- }
+    font-family: "Montserrat";
+    src: local("Montserrat Regular"),
+         local("Montserrat-400"),
+         url("font/Montserrat-Regular.woff2") format("woff2"),
+         url("font/Montserrat-Regular.woff") format("woff"),
+         url("font/Montserrat-Regular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 400;
+}
 
 @font-face {
-font-family: "Montserrat";  
-src: url("font/Montserrat-Medium.ttf") format("truetype"); 
-font-style: normal; 
-font-weight: 500;
- }
+    font-family: "Montserrat";
+    src: local("Montserrat Medium"),
+         local("Montserrat-500"),
+         url("font/Montserrat-Medium.woff2") format("woff2"),
+         url("font/Montserrat-Medium.woff") format("woff"),
+         url("font/Montserrat-Medium.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 500;
+}
 
 html {
     scroll-behavior: smooth;
@@ -25,10 +33,10 @@ body{
 	width: 100%;
 	text-align: center; 
 	margin: 0 auto;
-	padding-top: 100px; /* Увеличено для фиксированного меню */
+	padding-top: 100px; 
 }
 
-/* ===== СКРЫВАЮЩЕЕСЯ МЕНЮ ===== */
+
 .header-conteiner{
 	display: flex; 
     justify-content: space-between; 
@@ -38,8 +46,8 @@ body{
     left: 0;
     right: 0;
     z-index: 1000;
-    background: transparent; /* Прозрачный фон */
-    padding: 20px 80px; /* Отступы как в main-container */
+    background: transparent; 
+    padding: 20px 80px; 
     margin-bottom: 0;
     transition: transform 0.3s ease;
     max-width: 1600px;
@@ -50,7 +58,7 @@ body{
     pointer-events: auto;
 }
 
-/* Состояние, когда меню скрыто */
+
 .header-conteiner.header-hidden {
     transform: translateY(-100%);
 }
@@ -107,7 +115,7 @@ body{
     color: #0B0B0B; 
 }
 
-/* Скрываем мобильное меню на десктопе */
+
 .mobile-nav {
     display: none;
 }
@@ -122,7 +130,8 @@ body{
 .name{
 	max-width: 1600px;
 	width: 100%;
-	margin-bottom: 48px
+	margin-bottom: 48px;
+	margin-top: 24px
 }
 
 .hero{
@@ -135,14 +144,12 @@ body{
 .photo{
 	max-width: 600px; 
 	width: 100%;
-	height: 100%; /* Меняем auto на 100% */
+	height: 100%; 
 	position: relative;
-	/* max-height: 600px; - удаляем */
 	margin: 0 auto;
-	/* aspect-ratio: 600 / 600; - удаляем */
 	border-radius: 24px;
 	overflow: hidden;
-	object-fit: cover; /* Оставляем, чтобы фото не сжималось */
+	object-fit: cover;
 }
 
 .video-btn-words {
@@ -230,7 +237,6 @@ body{
 	margin-bottom: 32px
 }
 
-/* Якоря для навигации */
 #about, #projects, #contact {
     scroll-margin-top: 100px;
 }
@@ -240,7 +246,7 @@ body{
 	align-content: center;
 	flex-direction: column;
 	max-width: 800px;
-	width: 100%
+	width: 100%;
 }
 
 .text2{
@@ -262,17 +268,17 @@ body{
 	text-align:left;
 }
 
-/* Скрываем дополнительный текст на мобильных */
+
 .hidden-mobile {
     display: block;
 }
 
-/* Стили для мобильной версии */
+
 .read-more-btn {
     display: none;
 }
 
-/* Контейнер для скрытого текста (оба абзаца) */
+
 .more-text-container {
     display: block;
 }
@@ -390,7 +396,7 @@ a:hover {
 
 .conteiner-icons {
   display: flex;
-  gap: 56px;
+  gap: 64px;
   align-items: center;
   justify-content: flex-end;
   flex-shrink: 0;
@@ -417,7 +423,7 @@ footer{
 	color: #767676;
 }
 
-/* Анимации для появления элементов */
+
 .fade-in-item {
     opacity: 0;
     transform: translateY(30px);
@@ -429,7 +435,7 @@ footer{
     transform: translateY(0);
 }
 
-/* Задержки для каскадного появления */
+
 .delay-1 {
     transition-delay: 0.1s;
 }
@@ -455,9 +461,26 @@ footer{
 		max-height: 512px;
 		height: 100%
 	}
+	
+	.text-conteiner{
+		max-width: 713px;
+		width: 100%
+	}
 }
 
-/* Адаптив для экранов до 1440px */
+@media (max-width: 1512px) {
+	.photo{
+		max-height: 512px;
+		height: 100%
+	}
+	
+	.text-conteiner{
+		max-width: 713px;
+		width: 100%
+	}
+}
+
+
 @media (max-width: 1440px) {
     body {
         padding-top: 90px;
@@ -579,7 +602,8 @@ footer{
     }
     
     .conteiner-icons {
-        gap: 48px;
+        gap: 56px;
+		margin-right: 48px
     }
     
     .icons {
@@ -599,7 +623,7 @@ footer{
 	}
 }
 
-/* Адаптив для планшетов в горизонтальном виде (1194px) */
+
 @media (max-width: 1194px) {
     body {
         padding-top: 80px;
@@ -723,7 +747,8 @@ footer{
     }
     
     .conteiner-icons {
-        gap: 24px;
+        gap: 56px;
+		margin-right: 40px
     }
     
     .icons {
@@ -740,7 +765,7 @@ footer{
     }
 }
 
-/* Адаптив для вертикального планшета (834px) */
+
 @media (max-width: 834px) {
     body {
         padding-top: 70px;
@@ -805,6 +830,10 @@ footer{
         border-radius: 16px;
     }
     
+	.text-conteiner{
+		max-width: 415px
+	}
+	
     .video-btn-words {
         gap: 20px;
     }
@@ -816,7 +845,7 @@ footer{
     }
     
     .project-block .video-container {
-        max-width: 380px;
+        max-width: 415px;
         aspect-ratio: 380 / 214;
     }
     
@@ -837,7 +866,8 @@ footer{
     
     .text2 {
         font-size: 18pt;
-        max-width: 400px;
+        max-width: 320px;
+		margin-right: 20px
     }
     
     .text3 {
@@ -849,7 +879,7 @@ footer{
     }
     
     .video-names {
-        max-width: 380px;
+        max-width: 415px;
         margin-bottom: 28px;
     }
     
@@ -882,7 +912,7 @@ footer{
     }
     
     .conteiner-icons {
-        gap: 24px;
+        gap: 40px;
     }
     
     .icons {
@@ -896,7 +926,7 @@ footer{
     }
 }
 
-/* ========== МОБИЛЬНАЯ АДАПТАЦИЯ (до 768px) ========== */
+
 @media (max-width: 768px) {
     body {
         padding-top: 60px;
@@ -907,7 +937,7 @@ footer{
         background: transparent;
     }
     
-    /* Бургер-меню */
+   
     .mobile-nav {
         display: block;
         position: relative;
@@ -952,7 +982,7 @@ footer{
         transform: translateY(-10px) rotate(-45deg);
     }
     
-    /* ПОЛНОЭКРАННОЕ МЕНЮ */
+   
     .mobile-menu {
         display: none;
         position: fixed;
@@ -1093,7 +1123,7 @@ footer{
         text-align: left;
         gap: 4px;
 		max-width: 300px;
-		width: 100%
+		width: 100%;
     }
     
     .text1 {
@@ -1113,7 +1143,7 @@ footer{
     
     .about-me {
         flex-direction: column;
-        gap: 16px;
+        gap: 20px;
     }
     
     .text2 {
@@ -1127,7 +1157,7 @@ footer{
         font-size: 16px;
         text-align: center;
         line-height: 1.5;
-        margin-bottom: 16px;
+  
     }
     
     .text-conteiner {
@@ -1143,7 +1173,7 @@ footer{
     
     .more-text-container .text4 {
         font-size: 16px;
-        margin-top: 16px;
+        margin-top: 0;
         text-align: center;
     }
     
@@ -1188,13 +1218,13 @@ footer{
     .contacts {
         gap: 10px;
     }
-    
+	
     .text5 {
         font-size: 16px;
     }
     
     .conteiner-icons {
-        gap: 20px;
+        gap: 32px;
         justify-content: center;
         width: 100%;
     }
@@ -1240,16 +1270,17 @@ footer{
     }
     
     .text1 {
-        font-size: 14pt;
+        font-size: 12pt;
     }
     
     .conteiner-icons {
-		margin-top:16px;
-        gap: 24px;
+		margin-top:24px;
+        gap: 32px;
     }
     
     .icons {
         width: 40px;
         height: 40px;
     }
+	
 }
