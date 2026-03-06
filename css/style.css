@@ -190,7 +190,7 @@ body{
     display: flex;
     flex-direction: column;
     text-align: left;
-    gap: 8px;
+    gap: 16px;
     flex: 1;
 	max-width: 300px;
 	width: 100%
@@ -857,6 +857,10 @@ footer{
         aspect-ratio: 380 / 214;
     }
     
+	.words{
+		gap: 0px
+	}
+	
     .words-button-container {
         justify-content: space-between
     }
